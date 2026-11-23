@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "membackprop"
+version = "0.1.0"
+description = "Memory-efficient backprop through large output heads, with Llama from scratch"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+dependencies = ["torch>=2.4"]
+
+[project.optional-dependencies]
+dev = ["pytest", "transformers", "safetensors", "huggingface_hub"]
+
+[tool.setuptools]
+packages = ["membackprop"]
+
+[tool.black]
+line-length = 88
